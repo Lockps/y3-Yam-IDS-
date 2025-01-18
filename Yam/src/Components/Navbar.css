@@ -1,0 +1,7 @@
+.Nav-line {
+  background-color: white;
+  color: transparent;
+  height: 0.5px;
+  width: 80%;
+  background: radial-gradient(closest-side, #015de9, #00153e);
+}

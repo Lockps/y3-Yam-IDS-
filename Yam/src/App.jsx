@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import "./index.css";
 import Navbar from "./Components/Navbar";
 import AnimationBg from "./Components/AnimationBg";
+import { RxHamburgerMenu } from "react-icons/rx";
 
 const App = () => {
   const [openNav, setNav] = useState(true);
@@ -14,20 +15,18 @@ const App = () => {
     <div className="min-h-screen bg-mainbg flex relative">
       <AnimationBg />
       <div
-        className={`m-[0.5%] transition-all duration-300 ease-in-out ${
+        className={`m-[0.5%] bg-tran transition-all duration-300 ease-in-out ${
           openNav ? "w-[15%]" : "w-0"
         } overflow-hidden z-20`}
       >
-        <Navbar close={handleNavbar} />
+        <Navbar />
       </div>
-      {!openNav && (
-        <div
-          className="absolute top-0 left-0  bg-transparent z-10"
-          onClick={handleNavbar}
-        >
-          <button className="">Open Navbar</button>
-        </div>
-      )}
+      <div
+        className="absolute top-[3%] left-[1.5%]  bg-transparent z-20"
+        onClick={handleNavbar}
+      >
+        <RxHamburgerMenu className="text-whites text-xl font-bold" />
+      </div>
     </div>
   );
 };

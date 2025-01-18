@@ -7,6 +7,8 @@ export default {
       whites: "#fff",
       darkbg: "#060d28",
       lightbg: "#082254",
+      tran: "transparent",
+      iconbg: "#0075ff",
     },
     extend: {},
   },
