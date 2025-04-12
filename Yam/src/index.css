@@ -1,3 +1,27 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.container {
+    @apply flex;  /* ใช้ flexbox จาก Tailwind */
+    width: 100%;
+    height: 100vh;  /* ให้ความสูงเต็มหน้าจอ */
+  }
+  
+  /* ครึ่งซ้ายที่มีรูปภาพ */
+  .left-side {
+    @apply flex-1;  /* ใช้ flex-1 จาก Tailwind เพื่อให้ครึ่งซ้ายใช้พื้นที่ 50% */
+    background-image: url('E:\JOB\y3-Yam-IDS-\Yam\public\images\BackgroundLogin.png');
+    background-size: cover;
+    background-position: center;
+    z-index: 500;
+  }
+  
+  /* ครึ่งขวาที่มีฟอร์ม */
+  .right-side {
+    @apply flex-1;  /* ใช้ flex-1 จาก Tailwind */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+  }
