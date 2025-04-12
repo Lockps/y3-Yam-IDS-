@@ -14,6 +14,7 @@
     background-image: url('E:\JOB\y3-Yam-IDS-\Yam\public\images\BackgroundLogin.png');
     background-size: cover;
     background-position: center;
+    z-index: 500;
   }
   
   /* ครึ่งขวาที่มีฟอร์ม */

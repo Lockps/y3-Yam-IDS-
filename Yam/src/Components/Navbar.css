@@ -7,7 +7,7 @@
   background-color: #1a202c; /* Dark background color */
   width: 80%; /* Full width */
   padding: 20px 0; /* Padding around the navbar */
-  z-index: 1000; /* Ensure navbar stays on top */
+  z-index: 1100; /* Ensure navbar stays on top */
   display: flex;
   justify-content: center; 
   border-radius: 20px;
