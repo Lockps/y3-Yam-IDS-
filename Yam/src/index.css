@@ -2,26 +2,97 @@
 @tailwind components;
 @tailwind utilities;
 
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;  /* ปิดการเลื่อนหน้าเว็บ */
+}
+
 .container {
-    @apply flex;  /* ใช้ flexbox จาก Tailwind */
-    width: 100%;
-    height: 100vh;  /* ให้ความสูงเต็มหน้าจอ */
-  }
+  @apply flex;
+  width: 100%;
+  height: 100vh;
+}
+
+/* ครึ่งซ้ายที่มีรูปภาพ */
+.left-side {
+  @apply flex-1;
+  background-image: url('/images/BackgroundLogin.png');
+  background-size: cover;
+  background-position: center;
+  z-index: 0;
+}
+
+/* ครึ่งขวาที่มีฟอร์ม */
+.right-side {
+  @apply flex-1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  padding: 20px;
+  background: linear-gradient(to right, #1a0738, #021029);
+  position: relative;
+  z-index: 2;
   
-  /* ครึ่งซ้ายที่มีรูปภาพ */
-  .left-side {
-    @apply flex-1;  /* ใช้ flex-1 จาก Tailwind เพื่อให้ครึ่งซ้ายใช้พื้นที่ 50% */
-    background-image: url('E:\JOB\y3-Yam-IDS-\Yam\public\images\BackgroundLogin.png');
-    background-size: cover;
-    background-position: center;
-    z-index: 500;
-  }
   
-  /* ครึ่งขวาที่มีฟอร์ม */
-  .right-side {
-    @apply flex-1;  /* ใช้ flex-1 จาก Tailwind */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 20px;
-  }
+}
+
+.login-form {
+  width: 100%;
+  max-width: 500px;
+  padding: 20px;
+  background-color: #1a202c;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* เพิ่มสไตล์ให้กับ <h2> ใน .login-form */
+.login-form h2 {
+  font-size: 2rem; /* เปลี่ยนขนาดตัวอักษร */
+  font-weight: bold; /* ปรับให้หนา */
+  color: #fff; /* ปรับสีให้ขาว */
+}
+
+
+.login-form input,
+.login-form button {
+  width: 100%;
+  margin-bottom: 10px;
+  padding: 10px;
+  border-radius: 5px;
+  border: none;
+  background-color: #2d3748;
+  color: white;
+}
+
+.login-form button {
+  background-color: #3182ce;
+  color: white;
+  cursor: pointer;
+}
+
+.login-form p {
+  color: #cbd5e0;
+}
+
+.login-form label {
+  color: #cbd5e0;
+  font-size: 14px;
+}
+
+.login-form input:focus,
+.login-form button:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px #63b3ed;
+}
+
+.form-container {
+  background-color: rgba(0, 0, 0, 0.7); /* พื้นหลังโปร่งใส */
+  padding: 40px;
+  border-radius: 10px;
+  width: 80%;
+  max-width: 400px;
+  z-index: 2;  /* ให้ฟอร์มอยู่เหนือวงกลม */
+}
