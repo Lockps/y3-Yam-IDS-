@@ -25,7 +25,7 @@ const App = () => {
         className="absolute top-[3%] left-[1.5%]  bg-transparent z-20"
         onClick={handleNavbar}
       >
-        <RxHamburgerMenu className="text-whites text-xl font-bold" />
+        
       </div>
     </div>
   );
