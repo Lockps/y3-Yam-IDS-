@@ -22,9 +22,7 @@ const App = () => {
       <div className="right-side flex-1 relative">
         <AnimationBg />
         <div
-          className={`m-[0.5%] bg-tran transition-all duration-300 ease-in-out ${
-            openNav ? "w-[15%]" : "w-0"
-          } overflow-hidden z-50`}
+          className={`m-[0.5%] bg-tran transition-all duration-300 ease-in-out ${openNav ? "w-[15%]" : "w-0"} overflow-hidden z-50`}
         >
           <Navbar />
         </div>
@@ -32,23 +30,24 @@ const App = () => {
           className="absolute top-[3%] left-[1.5%] bg-transparent z-50"
           onClick={handleNavbar}
         >
-          
         </div>
-        {/* ใส่ Login Form ที่ด้านขวา */}
+        
+        
         <div className="login-form">
           <h2>Nice to see you!</h2>
           <p>Enter your email and password to sign in</p>
           <form>
-            <input type="email" placeholder="Your email address" />
-            <input type="password" placeholder="Your password" />
-            <div>
-              <label>
-                <input type="checkbox" />
-                Remember me
-              </label>
-            </div>
-            <button type="submit">Sign In</button>
-          </form>
+  <input type="email" placeholder="Your email address" />
+  <input type="password" placeholder="Your password" />
+  
+  <div className="remember-me">
+    <input type="checkbox" id="remember" /> 
+    <label htmlFor="remember">Remember me</label>
+  </div>
+  
+  <button type="submit">Sign In</button>
+</form>
+
         </div>
       </div>
     </div>

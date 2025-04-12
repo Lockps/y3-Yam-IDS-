@@ -56,6 +56,20 @@ html, body {
 }
 
 
+
+
+.login-form input[type="email"] {
+  margin-top: 35px;  
+}
+
+.login-form input[type="password"] {
+  margin-top: 10px;  
+}
+
+.login-form input[type="checkbox"] {
+  margin-top: 0px;  
+}
+
 .login-form input,
 .login-form button {
   width: 100%;
@@ -86,6 +100,20 @@ html, body {
 .login-form button:focus {
   outline: none;
   box-shadow: 0 0 0 3px #63b3ed;
+}
+
+
+.remember-me {
+  display: flex;
+  align-items: center;
+  gap: 8px;  /* ระยะห่างระหว่าง checkbox กับข้อความ */
+  font-size: 16px;
+  justify-content: flex-start; /* จัดตำแหน่งให้เริ่มต้นที่ซ้าย */
+  margin-top: 10px; /* เพิ่มระยะห่างจากฟอร์มด้านบน */
+}
+
+.remember-me input {
+  transform: scale(1.9);  /* ขยายขนาดของ checkbox */
 }
 
 .form-container {
