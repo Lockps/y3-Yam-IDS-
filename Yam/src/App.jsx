@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import "./index.css";
 import Navbar from "./Components/Navbar";
 import AnimationBg from "./Components/AnimationBg";
+import SignInForm from "./Components/SignInForm"; // นำเข้า SignInForm
 import { RxHamburgerMenu } from "react-icons/rx";
 
 const App = () => {
@@ -15,7 +16,7 @@ const App = () => {
     <div className="min-h-screen flex bg-mainbg">
       {/* ครึ่งซ้ายที่มีรูปภาพ */}
       <div className="left-side">
-        
+        {/* สามารถเพิ่มภาพหรือเนื้อหาที่ต้องการได้ */}
       </div>
 
       {/* ครึ่งขวาที่มี Navbar และ ฟอร์ม */}
@@ -30,24 +31,12 @@ const App = () => {
           className="absolute top-[3%] left-[1.5%] bg-transparent z-50"
           onClick={handleNavbar}
         >
+          <RxHamburgerMenu />
         </div>
         
-        
-        <div className="login-form">
-          <h2>Nice to see you!</h2>
-          <p>Enter your email and password to sign in</p>
-          <form>
-  <input type="email" placeholder="Your email address" />
-  <input type="password" placeholder="Your password" />
-  
-  <div className="remember-me">
-    <input type="checkbox" id="remember" /> 
-    <label htmlFor="remember">Remember me</label>
-  </div>
-  
-  <button type="submit">Sign In</button>
-</form>
-
+        {/* เพิ่มการแสดงผลของ SignInForm */}
+        <div className="sign-in-form-container">
+          <SignInForm />
         </div>
       </div>
     </div>
