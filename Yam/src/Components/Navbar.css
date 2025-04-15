@@ -1,45 +1,53 @@
 /* Navbar.css */
 .navbar {
-  position: fixed; /* Fix navbar at the top */
+  position: fixed;
   top: 0;
-  left: 50%; /* Center horizontally */
-  transform: translateX(-50%); /* Adjust the horizontal alignment */
-  background-color: #1a202c; /* Dark background color */
-  width: 80%; /* Full width */
-  padding: 20px 0; /* Padding around the navbar */
-  z-index: 1100; /* Ensure navbar stays on top */
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: rgba(26, 32, 44, 0.7); /* สีพื้นหลังที่โปร่งใส */
+  width: 50%;
+  padding: 10px 20px;
+  z-index: 1000;
   display: flex;
-  justify-content: center; 
-  border-radius: 20px;
+  justify-content: space-between;
+  align-items: center;
   margin-top: 20px;
+  border-radius: 19px;
+  
 }
 
 .navbar-content {
   display: flex;
-  justify-content: space-between; /* Space between navbar items */
-  align-items: center; /* Align items vertically */
-  width: 80%; /* Adjust width as needed */
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
 }
 
 .navbar h1 {
-  color: #ffffff;
-  font-size: 24px;
-  margin-right: 30px;
+  color: white;
+  font-size: 20px;
+  font-weight: 600;
+  
+}
+
+.navbar-icon {
+  margin-right: 8px; /* เพิ่มระยะห่างระหว่างไอคอนและข้อความ */
 }
 
 .navbar-links {
-  display: flex; /* เรียงไอคอนและข้อความในแนวนอน */
-  justify-content: center; /* จัดตำแหน่งกลาง */
-  align-items: center; /* จัดให้ไอคอนและข้อความอยู่ในแนวเดียวกัน */
+  display: flex;
+  justify-content: center;
+  gap: 30px;
 }
 
 .navbar-links a {
-  color: #ffffff;
-  margin: 0 20px; /* เพิ่มช่องว่างระหว่างลิงก์ */
-  text-decoration: none;
+  color: white;
   font-size: 16px;
+  font-weight: 500;
   display: flex;
   align-items: center;
+  margin: 0 20px;
+  gap: 8px;
 }
 
 .navbar-links a .navbar-icon {
@@ -47,31 +55,21 @@
 }
 
 .navbar-links a:hover {
-  color: #4299e1;
+  color: #3182ce; 
 }
 
-.navbar-links a:nth-child(2):hover {
-  color: #48bb78; /* Green color on hover for Profile */
-}
-
-.navbar-links a:nth-child(3):hover {
-  color: #f56565; /* Red color on hover for Sign Up */
-}
-
-.navbar-links a:nth-child(4):hover {
-  color: #ed8936; /* Orange color on hover for Sign In */
-}
 
 .btn-download {
-  background-color: #3182ce; /* Blue color */
-  color: #ffffff;
+  background-color: #3182ce;
+  color: white;
   padding: 10px 20px;
   border: none;
-  border-radius: 5px;
-  font-size: 16px;
+  border-radius: 15px;
   cursor: pointer;
 }
 
 .btn-download:hover {
-  background-color: #2b6cb0; /* Darker blue on hover */
+  background-color: #2b6cb0;
 }
+
+

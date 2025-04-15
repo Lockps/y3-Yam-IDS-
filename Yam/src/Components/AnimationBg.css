@@ -7,15 +7,15 @@
 
 .AniBg-Container li {
   list-style: none;
-  background: radial-gradient(closest-side, #015de9, #00153e);
+  background: radial-gradient(closest-side, #100769, #320863);
   width: 35%;
   padding-top: 35%;
   border: none;
   background-color: silver;
   border-radius: 50%;
   position: absolute;
-  box-shadow: inset #00153e 0px 0px 10000px;
-  z-index: 1;
+  box-shadow: inset #320e6b 0px 0px 10000px;
+  z-index: -3; /* ตั้งค่า z-index ให้น้อยกว่า */
 }
 
 .AniBg-Container li:nth-child(1) {

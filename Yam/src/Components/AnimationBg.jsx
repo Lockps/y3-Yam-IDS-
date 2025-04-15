@@ -1,4 +1,5 @@
 import React from "react";
+
 import "./AnimationBg.css";
 
 const AnimationBg = () => {
