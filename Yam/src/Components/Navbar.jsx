@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom"; // ใช้ Link สำหรับเปลี่ยนเส้นทาง
 import { FaHome, FaUser, FaSignInAlt, FaUserPlus } from "react-icons/fa";
 import './Navbar.css'; // เพิ่มบรรทัดนี้เพื่อใช้ Navbar.css
 
@@ -7,24 +8,22 @@ const Navbar = () => {
     <nav className="navbar">
       <h1 className="navbar-title">Badguy Detection</h1>
       <div className="navbar-links">
-        <a href="/dashboard">
+        <Link to="/dashboard"> {/* ใช้ Link แทน <a> เพื่อให้เปลี่ยนหน้า */}
           <FaHome /> Dashboard
-        </a>
-        <a href="/profile">
+        </Link>
+        <Link to="/profile">
           <FaUser /> Profile
-        </a>
-        <a href="/signup">
+        </Link>
+        <Link to="/signup"> {/* ลิงก์ไปหน้า SignUp */}
           <FaUserPlus /> Sign Up
-        </a>
-        <a href="/signin">
+        </Link>
+        <Link to="/signin"> {/* ลิงก์ไปหน้า SignIn */}
           <FaSignInAlt /> Sign In
-        </a>
+        </Link>
       </div>
       <button className="btn-download">Free Download</button>
     </nav>
   );
 };
-
-
 
 export default Navbar;

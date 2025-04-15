@@ -39,17 +39,18 @@ html, body {
   
 }
 
-.login-form {
+.login-form-container {
   width: 100%;
   max-width: 500px;
-  padding: 20px;
-  background-color: #1a202c;
+  padding: 40px;
+  background-color: rgba(0, 0, 0, 0.6);
   border-radius: 10px;
+  box-sizing: border-box;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 /* เพิ่มสไตล์ให้กับ <h2> ใน .login-form */
-.login-form h2 {
+.login-form-container h2 {
   font-size: 2rem; /* เปลี่ยนขนาดตัวอักษร */
   font-weight: bold; /* ปรับให้หนา */
   color: #fff; /* ปรับสีให้ขาว */
@@ -58,22 +59,22 @@ html, body {
 
 
 
-.login-form input[type="email"] {
+.login-form-container input[type="email"] {
   margin-top: 35px;  
 }
 
-.login-form input[type="password"] {
+.login-form-container input[type="password"] {
   margin-top: 10px;  
 }
 
-.login-form input[type="checkbox"] {
+.login-form-container input[type="checkbox"] {
   margin-top: 0px;  
 }
 
-.login-form input,
-.login-form button {
-  width: 100%;
-  margin-bottom: 10px;
+.login-form-container input,
+.login-form-container button {
+  width: 5%;
+  margin-bottom: 16px;
   padding: 10px;
   border-radius: 5px;
   border: none;
@@ -81,23 +82,23 @@ html, body {
   color: white;
 }
 
-.login-form button {
+.login-form-container button {
   background-color: #3182ce;
   color: white;
   cursor: pointer;
 }
 
-.login-form p {
+.login-form-container p {
   color: #cbd5e0;
 }
 
-.login-form label {
+.login-form-container label {
   color: #cbd5e0;
   font-size: 14px;
 }
 
-.login-form input:focus,
-.login-form button:focus {
+.login-form-container input:focus,
+.login-form-container button:focus {
   outline: none;
   box-shadow: 0 0 0 3px #63b3ed;
 }
@@ -109,7 +110,8 @@ html, body {
   gap: 8px;  /* ระยะห่างระหว่าง checkbox กับข้อความ */
   font-size: 16px;
   justify-content: flex-start; /* จัดตำแหน่งให้เริ่มต้นที่ซ้าย */
-  margin-top: 10px; /* เพิ่มระยะห่างจากฟอร์มด้านบน */
+  margin-top: 10px;
+  width: 400px;
 }
 
 .remember-me input {
@@ -123,4 +125,93 @@ html, body {
   width: 80%;
   max-width: 400px;
   z-index: 2;  /* ให้ฟอร์มอยู่เหนือวงกลม */
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"] {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+button[type="submit"] {
+  width: 100%;
+  padding: 12px;
+  border-radius: 5px;
+  background-color: #007bff;
+  color: white;
+  font-size: 16px;
+  border: none;
+}
+
+button[type="submit"]:hover {
+  background-color: #0056b3;
+}
+
+.sign-up-form-container {
+  width: 100%;
+  max-width: 500px;
+  padding: 40px;
+  background-color: rgba(0, 0, 0, 0.6);
+  border-radius: 10px;
+  box-sizing: border-box;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* เพิ่มสไตล์ให้กับ <h2> ใน .login-form */
+.sign-up-form-container h2 {
+  font-size: 2rem; /* เปลี่ยนขนาดตัวอักษร */
+  font-weight: bold; /* ปรับให้หนา */
+  color: #fff; /* ปรับสีให้ขาว */
+}
+
+
+
+
+.sign-up-form-container input[type="email"] {
+  margin-top: 10px;  
+}
+
+.sign-up-form-container input[type="password"] {
+  margin-top: 10px;  
+}
+
+.sign-up-form-container input[type="checkbox"] {
+  margin-top: 0px;  
+}
+
+.sign-up-form-container input,
+.sign-up-form-container button {
+  width: 100%;
+  margin-bottom: 16px;
+  padding: 10px;
+  border-radius: 5px;
+  border: none;
+  background-color: #2d3748;
+  color: white;
+}
+
+.sign-up-form-container button {
+  background-color: #3182ce;
+  color: white;
+  cursor: pointer;
+}
+
+.sign-up-form-container p {
+  color: #cbd5e0;
+  margin-bottom: 15px;
+}
+
+.sign-up-form-container label {
+  color: #cbd5e0;
+  font-size: 14px;
+}
+
+.sign-up-form-container input:focus,
+.sign-up-form-container button:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px #63b3ed;
 }
