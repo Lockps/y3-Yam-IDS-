@@ -1,23 +1,25 @@
 import React from "react";
 import { Link } from "react-router-dom"; // ใช้ Link สำหรับเปลี่ยนเส้นทาง
 import { FaHome, FaUser, FaSignInAlt, FaUserPlus } from "react-icons/fa";
-import './Navbar.css'; // เพิ่มบรรทัดนี้เพื่อใช้ Navbar.css
+import "./Navbar.css"; // เพิ่มบรรทัดนี้เพื่อใช้ Navbar.css
+import SignUpForm from "./SignUpForm";
+import SignInForm from "./SignInForm";
 
-const Navbar = () => {
+const Navbar = ({ onNavigate }) => {
   return (
     <nav className="navbar">
       <h1 className="navbar-title">Badguy Detection</h1>
       <div className="navbar-links">
-        <Link to="/dashboard"> {/* ใช้ Link แทน <a> เพื่อให้เปลี่ยนหน้า */}
+        <Link to="/dashboard">
           <FaHome /> Dashboard
         </Link>
         <Link to="/profile">
           <FaUser /> Profile
         </Link>
-        <Link to="/signup"> {/* ลิงก์ไปหน้า SignUp */}
+        <Link to="/" onClick={() => onNavigate(<SignUpForm />)}>
           <FaUserPlus /> Sign Up
         </Link>
-        <Link to="/signin"> {/* ลิงก์ไปหน้า SignIn */}
+        <Link to="/" onClick={() => onNavigate(<SignInForm />)}>
           <FaSignInAlt /> Sign In
         </Link>
       </div>
