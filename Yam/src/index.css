@@ -2,26 +2,215 @@
 @tailwind components;
 @tailwind utilities;
 
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;  /* ปิดการเลื่อนหน้าเว็บ */
+}
+
 .container {
-    @apply flex;  /* ใช้ flexbox จาก Tailwind */
-    width: 100%;
-    height: 100vh;  /* ให้ความสูงเต็มหน้าจอ */
-  }
+  @apply flex;
+  width: 100%;
+  height: 100vh;
+}
+
+/* ครึ่งซ้ายที่มีรูปภาพ */
+.left-side {
+  @apply flex-1;
+  background-image: url('/images/BackgroundLogin.png');
+  background-size: cover;
+  background-position: center;
+  z-index: 0;
+}
+
+/* ครึ่งขวาที่มีฟอร์ม */
+.right-side {
+  @apply flex-1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  padding: 20px;
+  background: linear-gradient(to right, #1a0738, #021029);
+  position: relative;
+  z-index: 2;
   
-  /* ครึ่งซ้ายที่มีรูปภาพ */
-  .left-side {
-    @apply flex-1;  /* ใช้ flex-1 จาก Tailwind เพื่อให้ครึ่งซ้ายใช้พื้นที่ 50% */
-    background-image: url('E:\JOB\y3-Yam-IDS-\Yam\public\images\BackgroundLogin.png');
-    background-size: cover;
-    background-position: center;
-    z-index: 500;
-  }
   
-  /* ครึ่งขวาที่มีฟอร์ม */
-  .right-side {
-    @apply flex-1;  /* ใช้ flex-1 จาก Tailwind */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 20px;
-  }
+}
+
+.login-form-container {
+  width: 100%;
+  max-width: 500px;
+  padding: 40px;
+  background-color: rgba(0, 0, 0, 0.6);
+  border-radius: 10px;
+  box-sizing: border-box;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* เพิ่มสไตล์ให้กับ <h2> ใน .login-form */
+.login-form-container h2 {
+  font-size: 2rem; /* เปลี่ยนขนาดตัวอักษร */
+  font-weight: bold; /* ปรับให้หนา */
+  color: #fff; /* ปรับสีให้ขาว */
+}
+
+
+
+
+.login-form-container input[type="email"] {
+  margin-top: 35px;  
+}
+
+.login-form-container input[type="password"] {
+  margin-top: 10px;  
+}
+
+.login-form-container input[type="checkbox"] {
+  margin-top: 0px;  
+}
+
+.login-form-container input,
+.login-form-container button {
+  width: 5%;
+  margin-bottom: 16px;
+  padding: 10px;
+  border-radius: 5px;
+  border: none;
+  background-color: #2d3748;
+  color: white;
+}
+
+.login-form-container button {
+  background-color: #3182ce;
+  color: white;
+  cursor: pointer;
+}
+
+.login-form-container p {
+  color: #cbd5e0;
+}
+
+.login-form-container label {
+  color: #cbd5e0;
+  font-size: 14px;
+}
+
+.login-form-container input:focus,
+.login-form-container button:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px #63b3ed;
+}
+
+
+.remember-me {
+  display: flex;
+  align-items: center;
+  gap: 8px;  /* ระยะห่างระหว่าง checkbox กับข้อความ */
+  font-size: 16px;
+  justify-content: flex-start; /* จัดตำแหน่งให้เริ่มต้นที่ซ้าย */
+  margin-top: 10px;
+  width: 400px;
+}
+
+.remember-me input {
+  transform: scale(1.9);  /* ขยายขนาดของ checkbox */
+}
+
+.form-container {
+  background-color: rgba(0, 0, 0, 0.7); /* พื้นหลังโปร่งใส */
+  padding: 40px;
+  border-radius: 10px;
+  width: 80%;
+  max-width: 400px;
+  z-index: 2;  /* ให้ฟอร์มอยู่เหนือวงกลม */
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"] {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 10px;
+  border-radius: 5px;
+}
+
+button[type="submit"] {
+  width: 100%;
+  padding: 12px;
+  border-radius: 5px;
+  background-color: #007bff;
+  color: white;
+  font-size: 16px;
+  border: none;
+}
+
+button[type="submit"]:hover {
+  background-color: #0056b3;
+}
+
+.sign-up-form-container {
+  width: 100%;
+  max-width: 500px;
+  padding: 40px;
+  background-color: rgba(0, 0, 0, 0.6);
+  border-radius: 10px;
+  box-sizing: border-box;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* เพิ่มสไตล์ให้กับ <h2> ใน .login-form */
+.sign-up-form-container h2 {
+  font-size: 2rem; /* เปลี่ยนขนาดตัวอักษร */
+  font-weight: bold; /* ปรับให้หนา */
+  color: #fff; /* ปรับสีให้ขาว */
+}
+
+
+
+
+.sign-up-form-container input[type="email"] {
+  margin-top: 10px;  
+}
+
+.sign-up-form-container input[type="password"] {
+  margin-top: 10px;  
+}
+
+.sign-up-form-container input[type="checkbox"] {
+  margin-top: 0px;  
+}
+
+.sign-up-form-container input,
+.sign-up-form-container button {
+  width: 100%;
+  margin-bottom: 16px;
+  padding: 10px;
+  border-radius: 5px;
+  border: none;
+  background-color: #2d3748;
+  color: white;
+}
+
+.sign-up-form-container button {
+  background-color: #3182ce;
+  color: white;
+  cursor: pointer;
+}
+
+.sign-up-form-container p {
+  color: #cbd5e0;
+  margin-bottom: 15px;
+}
+
+.sign-up-form-container label {
+  color: #cbd5e0;
+  font-size: 14px;
+}
+
+.sign-up-form-container input:focus,
+.sign-up-form-container button:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px #63b3ed;
+}
