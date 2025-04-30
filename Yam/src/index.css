@@ -134,7 +134,6 @@ input[type="password"] {
   padding: 12px;
   margin-bottom: 10px;
   border-radius: 5px;
-  border: 1px solid #ccc;
 }
 
 button[type="submit"] {

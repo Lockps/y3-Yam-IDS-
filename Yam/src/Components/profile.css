@@ -1,0 +1,18 @@
+.profile-page {
+  padding: 20px;
+  background-color: #f5f5f5;
+}
+
+.profile-header img {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+}
+
+.profile-details {
+  margin-top: 20px;
+}
+
+.project-card {
+  margin-top: 10px;
+}

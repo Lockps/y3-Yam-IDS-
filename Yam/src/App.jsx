@@ -1,10 +1,11 @@
 import React, { useState } from "react";
-import { BrowserRouter as Router, Route, Routes } from "react-router-dom"; // ใช้ Routes แทน Switch
-import "./index.css";
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import "./index.css";  // ใช้สำหรับสไตล์ที่เกี่ยวข้องกับหน้าแอพหลัก
 import Navbar from "./Components/Navbar";
 import AnimationBg from "./Components/AnimationBg";
 import SignInForm from "./Components/SignInForm";
-import SignUpForm from "./Components/SignUpForm"; // นำเข้า SignUpForm
+import SignUpForm from "./Components/SignUpForm";
+import Profile from "./Profileee"; // นำเข้า Profile.jsx
 import { RxHamburgerMenu } from "react-icons/rx";
 
 const App = () => {
@@ -17,7 +18,6 @@ const App = () => {
   return (
     <Router>
       <div className="min-h-screen flex bg-mainbg">
-        {/* ครึ่งซ้ายที่มีรูปภาพ */}
         <div className="left-side"></div>
 
         {/* ครึ่งขวาที่มี Navbar และ ฟอร์ม */}
@@ -35,10 +35,11 @@ const App = () => {
             <RxHamburgerMenu />
           </div>
 
-          {/* ใช้ react-router-dom เพื่อกำหนดเส้นทาง */}
+          {/* ใช้ React Router เพื่อกำหนดเส้นทาง */}
           <Routes>
             <Route path="/signin" element={<SignInForm />} />
             <Route path="/signup" element={<SignUpForm />} />
+            <Route path="/profile" element={<Profile />} /> {/* แสดงหน้า Profile */}
           </Routes>
         </div>
       </div>
