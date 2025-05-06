@@ -5,7 +5,6 @@ import Navbar from "./Components/Navbar";
 import AnimationBg from "./Components/AnimationBg";
 import SignInForm from "./Components/SignInForm";
 import SignUpForm from "./Components/SignUpForm";
-import Profile from "./Profileee"; // นำเข้า Profile.jsx
 import { RxHamburgerMenu } from "react-icons/rx";
 
 const Landing = () => {
