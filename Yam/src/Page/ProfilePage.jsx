@@ -11,7 +11,8 @@ const ProfilePage = () => {
   <hr />
   <ul>
   <li><a href="/dashboard"><span className="icon">🏠</span> Dashboard</a></li>
-  <li><a href="/tables"><span className="icon">📊</span> Tables</a></li>
+  <li><a href="/threat-detection"><span className="icon">📊</span> Tables</a></li>
+  {/* <li><a href="/tables"><span className="icon">📊</span> Tables</a></li> */}
   <li><a href="/billing"><span className="icon">📄</span> Billing</a></li>
   <li><a href="/rtl"><span className="icon">⚙️</span> RTL</a></li>
 </ul>
