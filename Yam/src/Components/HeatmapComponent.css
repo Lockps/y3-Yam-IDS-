@@ -1,0 +1,153 @@
+/* Main container */
+.heatmap-container {
+  background: linear-gradient(to right, #0f0c29, #302b63);
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  font-family: 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
+  color: #e0e0e0;
+}
+
+/* Header */
+.heatmap-header {
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.heatmap-header h2 {
+  font-size: 1.8rem;
+  font-weight: 600;
+  margin: 0;
+  color: #ffffff;
+  letter-spacing: 0.5px;
+}
+
+.heatmap-header .subtitle {
+  font-size: 0.9rem;
+  opacity: 0.8;
+  margin-top: 5px;
+}
+
+/* Heatmap grid */
+.heatmap-grid {
+  display: grid;
+  grid-template-columns: 50px repeat(24, 1fr);
+  grid-template-rows: auto repeat(7, 30px);
+  gap: 3px;
+  overflow-x: auto;
+  min-height: 260px;
+}
+
+/* Headers */
+.time-header {
+  font-size: 0.75rem;
+  text-align: center;
+  padding: 5px 0;
+  font-weight: 500;
+  color: #a0a0a0;
+}
+
+.day-label {
+  font-size: 0.85rem;
+  text-align: right;
+  padding-right: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  font-weight: 500;
+  color: #ffffff;
+}
+
+/* Cells */
+.heatmap-cell {
+  background: #1a1a2e;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.75rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.heatmap-cell:hover {
+  transform: scale(1.1);
+  z-index: 2;
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
+}
+
+/* Legend */
+.heatmap-legend {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 25px;
+  gap: 8px;
+  font-size: 0.85rem;
+}
+
+.legend-scale {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.legend-label {
+  font-weight: 500;
+  color: #ffffff;
+}
+
+.legend-gradient {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.gradient-bar {
+  width: 200px;
+  height: 12px;
+  background: linear-gradient(to right, 
+    #2b9348, 
+    #aacc00, 
+    #ffd700, 
+    #ff8c00, 
+    #ff0000);
+  border-radius: 6px;
+}
+
+.legend-labels {
+  display: flex;
+  justify-content: space-between;
+  width: 220px;
+}
+
+.legend-labels span {
+  flex: 1;
+  text-align: center;
+  font-weight: 500;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .heatmap-container {
+    padding: 15px;
+  }
+  
+  .heatmap-grid {
+    grid-template-columns: 40px repeat(24, 1fr);
+  }
+  
+  .time-header {
+    font-size: 0.65rem;
+  }
+  
+  .day-label {
+    font-size: 0.75rem;
+  }
+}
