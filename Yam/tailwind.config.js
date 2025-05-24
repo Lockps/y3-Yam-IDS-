@@ -9,6 +9,8 @@ export default {
       lightbg: "#082254",
       tran: "transparent",
       iconbg: "#0075ff",
+      gray: "#949494",
+      black: "#000000",
     },
     extend: {},
   },

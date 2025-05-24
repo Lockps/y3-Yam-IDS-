@@ -13,9 +13,9 @@ const Navbar = ({ onNavigate }) => {
         <Link to="/dashboard">
           <FaHome /> Dashboard
         </Link>
-        <Link to="/profile">
+        {/* <Link to="/profile">
           <FaUser /> Profile
-        </Link>
+        </Link> */}
         <Link to="/" onClick={() => onNavigate(<SignUpForm />)}>
           <FaUserPlus /> Sign Up
         </Link>

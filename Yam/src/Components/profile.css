@@ -1,65 +1,64 @@
+.profile-container {
+  display: flex;
+  height: 100vh;
+  background: linear-gradient(to right, #1a0738, #021029);
+}
 
-  .profile-container {
-    display: flex;
-    height: 100vh;
-    background: linear-gradient(to right, #1a0738, #021029);
-  }
-  
-  .sidebar {
-    background-color: #0a0f29;
-    color: white;
-    padding: 20px;
-    width: 250px;
-    height: 91.7vh;
-    margin-top: 30px;
-    margin-left: 20px;
-    border-radius: 20px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-  }
-  
-  .sidebar h3 {
-    font-size: 2rem;
-    font-weight: bold;
-    color: rgba(255, 255, 255, 0.8); /* สีขาวจาง */
-    text-align: center;
-    letter-spacing: 2px; /* เพิ่มระยะห่างระหว่างตัวอักษร */
-    margin-bottom: -230px; /* ลดระยะห่างด้านล่าง */
-    text-transform: uppercase; /* เปลี่ยนข้อความเป็นตัวพิมพ์ใหญ่ */
-  }
-  .sidebar h4{
-    font-weight: bold;
-    color: rgba(255, 255, 255, 0.8); /* สีขาวจาง */
-  }
-  .sidebar hr {
-    border: none;
-    border-top: 1px solid #2d3748;
-    margin: 56px 0;
-  }
-  
-  .sidebar ul {
-    list-style: none;
-    padding: 0;
-    margin-top: -200px; /* ลดระยะห่างด้านบน */
-  }
-  
-  .sidebar ul li {
-    margin: 4px 0; 
-  }
-  
-  .sidebar ul li a {
-    text-decoration: none;
-    color: rgba(255, 255, 255, 0.8); /* สีขาวจาง */
-    display: flex;
-    align-items: center;
-    gap: 10px; /* ระยะห่างระหว่างไอคอนและข้อความ */
-    padding: 10px 15px; /* เพิ่มพื้นที่ภายใน */
-    border-radius: 8px; /* มุมโค้งมน */
-    transition: background-color 0.3s ease;
-  }
+.sidebar {
+  background-color: #0a0f29;
+  color: white;
+  padding: 20px;
+  width: 250px;
+  height: 91.7vh;
+  margin-top: 30px;
+  margin-left: 20px;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
 
-  .sidebar ul li a .icon {
+.sidebar h3 {
+  font-size: 2rem;
+  font-weight: bold;
+  color: rgba(255, 255, 255, 0.8); /* สีขาวจาง */
+  text-align: center;
+  letter-spacing: 2px; /* เพิ่มระยะห่างระหว่างตัวอักษร */
+  margin-bottom: -230px; /* ลดระยะห่างด้านล่าง */
+  text-transform: uppercase; /* เปลี่ยนข้อความเป็นตัวพิมพ์ใหญ่ */
+}
+.sidebar h4 {
+  font-weight: bold;
+  color: rgba(255, 255, 255, 0.8); /* สีขาวจาง */
+}
+.sidebar hr {
+  border: none;
+  border-top: 1px solid #2d3748;
+  margin: 56px 0;
+}
+
+.sidebar ul {
+  list-style: none;
+  padding: 0;
+  margin-top: -200px; /* ลดระยะห่างด้านบน */
+}
+
+.sidebar ul li {
+  margin: 4px 0;
+}
+
+.sidebar ul li a {
+  text-decoration: none;
+  color: rgba(255, 255, 255, 0.8); /* สีขาวจาง */
+  display: flex;
+  align-items: center;
+  gap: 10px; /* ระยะห่างระหว่างไอคอนและข้อความ */
+  padding: 10px 15px; /* เพิ่มพื้นที่ภายใน */
+  border-radius: 8px; /* มุมโค้งมน */
+  transition: background-color 0.3s ease;
+}
+
+.sidebar ul li a .icon {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -71,39 +70,39 @@
   font-size: 1.2rem; /* ขนาดของ Emoji */
   margin-right: 10px; /* ระยะห่างระหว่าง Emoji และข้อความ */
 }
-  
-  .sidebar ul li a:hover {
-    background-color: rgba(255, 255, 255, 0.1); /* พื้นหลังสีขาวจางเมื่อ hover */
-  }
-  
-  .sidebar ul li a.active {
-    background-color: rgba(255, 255, 255, 0.2); /* พื้นหลังสีขาวจางเมื่อ active */
-    color: white; /* สีข้อความเป็นสีขาว */
-  }
-  
-  .sidebar h4 {
-    font-size: 0.9rem;
-    color: rgba(255, 255, 255, 0.6); /* สีขาวจาง */
-    margin-top: 20px; /* เพิ่มระยะห่างด้านบน */
-    margin-bottom: 10px; /* เพิ่มระยะห่างด้านล่าง */
-    text-transform: uppercase; /* เปลี่ยนข้อความเป็นตัวพิมพ์ใหญ่ */
-    letter-spacing: 1px; /* เพิ่มระยะห่างระหว่างตัวอักษร */
-  }
-  
-  .help-section {
-    background-color: rgba(255, 255, 255, 0.1); /* พื้นหลังสีขาวจาง */
-    padding: 15px;
-    border-radius: 8px;
-    text-align: center;
-  }
-  
-  .help-section p {
-    margin: 0;
-    color: rgba(255, 255, 255, 0.6); /* สีขาวจาง */
-    font-size: 0.9rem;
-  }
-  
-  .help-section .icon {
+
+.sidebar ul li a:hover {
+  background-color: rgba(255, 255, 255, 0.1); /* พื้นหลังสีขาวจางเมื่อ hover */
+}
+
+.sidebar ul li a.active {
+  background-color: rgba(255, 255, 255, 0.2); /* พื้นหลังสีขาวจางเมื่อ active */
+  color: white; /* สีข้อความเป็นสีขาว */
+}
+
+.sidebar h4 {
+  font-size: 0.9rem;
+  color: rgba(255, 255, 255, 0.6); /* สีขาวจาง */
+  margin-top: 20px; /* เพิ่มระยะห่างด้านบน */
+  margin-bottom: 10px; /* เพิ่มระยะห่างด้านล่าง */
+  text-transform: uppercase; /* เปลี่ยนข้อความเป็นตัวพิมพ์ใหญ่ */
+  letter-spacing: 1px; /* เพิ่มระยะห่างระหว่างตัวอักษร */
+}
+
+.help-section {
+  background-color: rgba(255, 255, 255, 0.1); /* พื้นหลังสีขาวจาง */
+  padding: 15px;
+  border-radius: 8px;
+  text-align: center;
+}
+
+.help-section p {
+  margin: 0;
+  color: rgba(255, 255, 255, 0.6); /* สีขาวจาง */
+  font-size: 0.9rem;
+}
+
+.help-section .icon {
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -115,27 +114,24 @@
   font-size: 1.2rem;
   margin-right: 10px;
 }
-  .documentation-button {
-    background-color: #3182ce;
-    color: white;
-    border: none;
-    padding: 10px 15px;
-    border-radius: 8px;
-    cursor: pointer;
-    margin-top: 10px;
-    transition: background-color 0.3s ease;
-  }
-  
-  .documentation-button:hover {
-    background-color: #63b3ed;
-  }
-
-.main-content {
-  flex: 1;
-  padding: 20px;
+.documentation-button {
+  background-color: #3182ce;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 8px;
+  cursor: pointer;
+  margin-top: 10px;
+  transition: background-color 0.3s ease;
 }
 
+.documentation-button:hover {
+  background-color: #63b3ed;
+}
 
+.main-content {
+  width: 75%;
+}
 
 .profile-header img {
   border-radius: 50%;
@@ -144,7 +140,6 @@
   margin-right: 10px;
   margin-left: 15px;
 }
-
 
 .profile-header {
   background: linear-gradient(to right, #1b2edb, #04183a);
@@ -174,9 +169,7 @@
   flex-direction: column;
   align-items: flex-end; /* จัดข้อความให้อยู่ชิดขวา */
   margin-right: 1450px; /* เพิ่มระยะห่างจากขอบขวา */
-  
 }
-
 
 .profile-actions .action-button {
   background-color: #3182ce;
@@ -185,7 +178,7 @@
   border-radius: 15px;
   cursor: pointer;
   border: none;
-  margin-left: 45px;    
+  margin-left: 45px;
 }
 
 .profile-actions {
@@ -203,6 +196,8 @@
 }
 
 .profile-top {
+  width: 100%;
+  height: 100%;
   display: flex;
   flex-direction: column; /* จัดเรียงเนื้อหาในแนวตั้ง */
   gap: 20px; /* เพิ่มระยะห่างระหว่าง Welcome back และ Platform Settings */
@@ -211,17 +206,16 @@
 .welcome-back,
 .car-info-wrapper,
 .profile-info-container {
-  flex: 1; /* ให้แต่ละกล่องขยายเท่ากัน */
   background-color: #2d3748;
   padding: 20px;
   border-radius: 12px;
   color: white;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  height: 50%;
 }
-.welcome-back{
-  background-image: url('E:\JOB\y3-Yam-IDS-\Yam\public\images\Profilewelcome.png'); /* Replace with your image path */
+.welcome-back {
+  background-image: url("\images\Profilewelcome.png"); /* Replace with your image path */
   background-size: cover;
-  height: 400px; /* กำหนดความสูงให้เท่ากับกรอบข้างๆ */
 }
 .car-info-wrapper {
   background: linear-gradient(to right, #1b2edb, #04183a);
@@ -234,8 +228,7 @@
   flex-direction: column;
   gap: -1px;
   min-width: 50%;
-  height: 400px; /* กำหนดความสูงขั้นต่ำ */
-   /* ปรับความสูงให้พอดีกับเนื้อหา */
+  /* ปรับความสูงให้พอดีกับเนื้อหา */
 }
 
 .car-info-wrapper h3 {
@@ -266,7 +259,7 @@
   padding: 15px;
   border-radius: 10px;
   width: 22%;
-  height: 100px; 
+  height: 100px;
   text-align: center;
   color: white;
 }
@@ -297,8 +290,8 @@
   height: 100px;
   border-radius: 50%;
   background: conic-gradient(
-    #4caf50 0% 68%, /* สีเขียวตามเปอร์เซ็นต์ */
-    #d3d3d3 68% 100% /* สีเทาสำหรับส่วนที่เหลือ */
+    #4caf50 0% 68%,
+    /* สีเขียวตามเปอร์เซ็นต์ */ #d3d3d3 68% 100% /* สีเทาสำหรับส่วนที่เหลือ */
   );
   display: flex;
   justify-content: center;
@@ -320,7 +313,8 @@
   margin-bottom: 10px;
 }
 
-.car-info p, .car-time p {
+.car-info p,
+.car-time p {
   font-size: 16px;
 }
 
@@ -334,7 +328,6 @@
   padding: 20px;
   border-radius: 10px;
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
-  height: 400px; /* กำหนดความสูงให้เท่ากับกรอบข้างๆ */
 }
 
 .profile-info-container h3 {
@@ -365,26 +358,26 @@
 .TopPage {
   display: flex;
   align-items: center; /* จัดให้อยู่ในแนวขวาง */
-  gap: 5px;  /* ระยะห่างระหว่าง Pages และ /Profile */
+  gap: 5px; /* ระยะห่างระหว่าง Pages และ /Profile */
   color: #ffffff;
   font-size: 18px;
   margin-top: 10px;
 }
 
-
-.TopPage h4{
-  color: #cbd5e0; 
-  margin: 0; 
+.TopPage h4 {
+  color: #cbd5e0;
+  margin: 0;
 }
 
 .top-row {
+  width: 100%;
+  height: 100%;
   display: flex;
   justify-content: space-between; /* จัดเรียง 3 ช่องในแนวนอน */
   gap: 20px; /* ระยะห่างระหว่างแต่ละช่อง */
 }
 
 /* เพิ่มสไตล์สำหรับกล่อง 'Welcome back' */
-
 
 .welcome-back h1 {
   font-size: 2.5rem;
@@ -413,7 +406,6 @@
 .turn-on-car:hover {
   background-color: #63b3ed;
 }
-
 
 .profile-info h3 {
   font-size: 15px;
@@ -448,7 +440,7 @@
   color: #63b3ed;
   margin-bottom: 0; /* ลบระยะห่างด้านล่าง */
   width: 150px; /* กำหนดความกว้างคงที่ให้หัวข้อ */
-   /* จัดข้อความหัวข้อให้อยู่ชิดขวา */
+  /* จัดข้อความหัวข้อให้อยู่ชิดขวา */
 }
 
 .profile-item p {
@@ -457,7 +449,6 @@
   margin-bottom: 0; /* ลบระยะห่างด้านล่าง */
   flex: 1; /* ให้ข้อความเนื้อหาขยายเต็มพื้นที่ */
 }
-
 
 .platform-settings h3 {
   font-size: 1.5rem;
@@ -506,10 +497,10 @@
   padding: 20px;
   border-radius: 10px;
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
-  width: 24.1%; 
-  min-width: 200px; 
-  flex-shrink: 0; 
-  margin-top: -10px; 
+  width: 24.1%;
+  min-width: 200px;
+  flex-shrink: 0;
+  margin-top: -10px;
 }
 
 .projects {
@@ -519,8 +510,8 @@
   border-radius: 12px;
   color: white;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-  margin-top: -10px; 
-  height: 432px; 
+  margin-top: -10px;
+  height: 432px;
 }
 
 .projects h3 {
@@ -536,7 +527,6 @@
 }
 
 .project-item {
- 
   border-radius: 12px;
   padding: 15px;
   color: white;
@@ -548,9 +538,9 @@
 }
 
 .project-item img {
-  width: 100%; 
-  height: 250px; 
-  object-fit: cover; 
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
 }
 
 .project-item h4 {

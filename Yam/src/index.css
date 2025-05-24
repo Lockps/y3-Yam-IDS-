@@ -2,11 +2,13 @@
 @tailwind components;
 @tailwind utilities;
 
-html, body {
+html,
+body {
   height: 100%;
   margin: 0;
   padding: 0;
-  overflow: hidden;  /* ปิดการเลื่อนหน้าเว็บ */
+  overflow: hidden;
+  color: #ffffff;
 }
 
 .container {
@@ -18,7 +20,7 @@ html, body {
 /* ครึ่งซ้ายที่มีรูปภาพ */
 .left-side {
   @apply flex-1;
-  background-image: url('/images/BackgroundLogin.png');
+  background-image: url("/images/BackgroundLogin.png");
   background-size: cover;
   background-position: center;
   z-index: 0;
@@ -35,8 +37,6 @@ html, body {
   background: linear-gradient(to right, #1a0738, #021029);
   position: relative;
   z-index: 2;
-  
-  
 }
 
 .login-form-container {
@@ -56,19 +56,16 @@ html, body {
   color: #fff; /* ปรับสีให้ขาว */
 }
 
-
-
-
 .login-form-container input[type="email"] {
-  margin-top: 35px;  
+  margin-top: 35px;
 }
 
 .login-form-container input[type="password"] {
-  margin-top: 10px;  
+  margin-top: 10px;
 }
 
 .login-form-container input[type="checkbox"] {
-  margin-top: 0px;  
+  margin-top: 0px;
 }
 
 .login-form-container input,
@@ -103,11 +100,10 @@ html, body {
   box-shadow: 0 0 0 3px #63b3ed;
 }
 
-
 .remember-me {
   display: flex;
   align-items: center;
-  gap: 8px;  /* ระยะห่างระหว่าง checkbox กับข้อความ */
+  gap: 8px; /* ระยะห่างระหว่าง checkbox กับข้อความ */
   font-size: 16px;
   justify-content: flex-start; /* จัดตำแหน่งให้เริ่มต้นที่ซ้าย */
   margin-top: 10px;
@@ -115,7 +111,7 @@ html, body {
 }
 
 .remember-me input {
-  transform: scale(1.9);  /* ขยายขนาดของ checkbox */
+  transform: scale(1.9); /* ขยายขนาดของ checkbox */
 }
 
 .form-container {
@@ -124,7 +120,7 @@ html, body {
   border-radius: 10px;
   width: 80%;
   max-width: 400px;
-  z-index: 2;  /* ให้ฟอร์มอยู่เหนือวงกลม */
+  z-index: 2; /* ให้ฟอร์มอยู่เหนือวงกลม */
 }
 
 input[type="text"],
@@ -167,19 +163,16 @@ button[type="submit"]:hover {
   color: #fff; /* ปรับสีให้ขาว */
 }
 
-
-
-
 .sign-up-form-container input[type="email"] {
-  margin-top: 10px;  
+  margin-top: 10px;
 }
 
 .sign-up-form-container input[type="password"] {
-  margin-top: 10px;  
+  margin-top: 10px;
 }
 
 .sign-up-form-container input[type="checkbox"] {
-  margin-top: 0px;  
+  margin-top: 0px;
 }
 
 .sign-up-form-container input,

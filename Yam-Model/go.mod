@@ -11,4 +11,5 @@ require (
 	github.com/sjwhitworth/golearn v0.0.0-20221228163002-74ae077eafb2 // indirect
 	golang.org/x/exp v0.0.0-20200331195152-e8c3332aa8e5 // indirect
 	golang.org/x/sync v0.0.0-20200317015054-43a5402ce75a // indirect
+	gonum.org/v1/gonum v0.8.1 // indirect
 )

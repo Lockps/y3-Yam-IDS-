@@ -1,80 +1,57 @@
 package main
 
 import (
-	"encoding/json"
+	"encoding/gob"
 	"fmt"
-	"io/ioutil"
 	"os"
-
-	"github.com/sjwhitworth/golearn/base"
-	"github.com/sjwhitworth/golearn/evaluation"
-	"github.com/sjwhitworth/golearn/trees"
 )
 
-// Custom struct to store the model
-type SerializableTree struct {
-	Model *trees.ID3DecisionTree
+type TinyModel struct {
+	Threshold float64
+}
+
+func (m *TinyModel) Predict(x float64) string {
+	if x > m.Threshold {
+		return "Positive"
+	}
+	return "Negative"
+}
+
+func saveModel(filename string, model *TinyModel) error {
+	file, err := os.Create(filename)
+	if err != nil {
+		return err
+	}
+	defer file.Close()
+
+	encoder := gob.NewEncoder(file)
+	return encoder.Encode(model)
+}
+
+func loadModel(filename string) (*TinyModel, error) {
+	file, err := os.Open(filename)
+	if err != nil {
+		return nil, err
+	}
+	defer file.Close()
+
+	var model TinyModel
+	decoder := gob.NewDecoder(file)
+	err = decoder.Decode(&model)
+	return &model, err
 }
 
 func main() {
-	modelPath := "./core/model/model.json"
+	fmt.Println("🧠 Creating smallest model...")
 
-	if _, err := os.Stat(modelPath); os.IsNotExist(err) {
-		trainAndSaveModel(modelPath)
-	} else {
-		loadAndPredict(modelPath)
-	}
-}
+	model := &TinyModel{Threshold: 0.5}
 
-func trainAndSaveModel(path string) {
-	fmt.Println("Training model...")
-
-	data, err := base.ParseCSVToInstances("./core/data/BruteForce.csv", true)
+	err := saveModel("tiny_model.gob", model)
 	if err != nil {
 		panic(err)
 	}
+	fmt.Println("💾 Model saved to tiny_model.gob")
 
-	trainData, testData := base.InstancesTrainTestSplit(data, 0.7)
-
-	tree := trees.NewID3DecisionTree(0.6)
-	tree.Fit(trainData)
-
-	predictions, _ := tree.Predict(testData)
-	confMat, _ := evaluation.GetConfusionMatrix(testData, predictions)
-	fmt.Println("Evaluation:")
-	fmt.Println(evaluation.GetSummary(confMat))
-
-	model := SerializableTree{Model: tree}
-	bytes, err := json.MarshalIndent(model, "", "  ")
-	if err != nil {
-		panic(err)
-	}
-	os.WriteFile(path, bytes, 0644)
-	fmt.Println("Model saved to", path)
-}
-
-func loadAndPredict(path string) {
-	fmt.Println("Loading model from", path)
-
-	bytes, err := ioutil.ReadFile(path)
-	if err != nil {
-		panic(err)
-	}
-
-	var model SerializableTree
-	err = json.Unmarshal(bytes, &model)
-	if err != nil {
-		panic(err)
-	}
-
-	data, err := base.ParseCSVToInstances("./core/data/BruteForce.csv", true)
-	if err != nil {
-		panic(err)
-	}
-	_, testData := base.InstancesTrainTestSplit(data, 0.7)
-
-	predictions, _ := model.Model.Predict(testData)
-	confMat, _ := evaluation.GetConfusionMatrix(testData, predictions)
-	fmt.Println("Loaded model evaluation:")
-	fmt.Println(evaluation.GetSummary(confMat))
+	test := 0.6
+	fmt.Printf("🔍 Predicting for %.2f: %s\n", test, model.Predict(test))
 }
